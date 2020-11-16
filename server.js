@@ -70,5 +70,5 @@ app.post('/contact', function (req, res) {
 
 
 app.listen(process.env.PORT || port, function () {
-   console.log(`The server is running at http://${hostname}:${port}`);
+   // console.log(`The server is running at http://${hostname}:${port}`);
 });
