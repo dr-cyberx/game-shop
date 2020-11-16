@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cyber-X</title>
+   <link rel="stylesheet" href="/static/style/style.css">
+
+   <style>
+      .bg-img::before {
+         content: "";
+         position: absolute;
+         z-index: -1;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: rgba(0, 0, 0, 0.8) url('/static/img/city.jpeg');
+         background-repeat: no-repeat;
+         background-size: 100%;
+         height: 100vh;
+         width: 100%;
+         background-blend-mode: darken;
+      }
+
+      .my-form {
+         width: 80%;
+         margin: auto;
+         text-align: center;
+         color: rgb(50, 50, 50);
+
+      }
+
+      .my-form h1 {
+         margin: 40px 0px;
+         font-size: 3rem;
+         color: rgb(255, 255, 255);
+      }
+
+      form {
+         width: 50%;
+         margin: auto;
+         display: flex;
+         flex-direction: column;
+      }
+
+      form input,
+      #input {
+         height: 40px;
+         margin: 12px;
+         border-radius: 5px;
+         border: 3px solid rgb(150, 150, 150);
+         outline: none;
+         box-shadow: 0.1px 0.1px 2px grey;
+         font-family: sans-serif;
+         font-size: 20px;
+         color: rgb(50, 50, 50);
+         text-align: center;
+         transition: all 0.2s ease-in-out;
+      }
+
+      #input {
+         min-height: 150px;
+         max-height: 150px;
+         min-width: 95%;
+         max-width: 95%;
+         transition: all 0.2s ease-in-out;
+      }
+
+      #input:focus {
+         border: 3px solid rgb(7, 168, 255);
+         box-shadow: 0.1px 0.1px 6px rgb(179, 241, 255);
+      }
+
+      form input:focus {
+         border: 3px solid rgb(7, 168, 255);
+         box-shadow: 0.1px 0.1px 6px rgb(179, 241, 255);
+      }
+
+      .sub-btn {
+         font-family: sans-serif;
+         width: 40%;
+         margin: auto;
+         height: 40px;
+         margin-top: 20px;
+         border: none;
+         background: rgb(0, 166, 255);
+         color: white;
+         font-size: 20px;
+         border-radius: 7px;
+         box-shadow: 0.1px 0.1px 5px rgb(61, 61, 61);
+         outline: none;
+         transition: all 0.2s ease-in-out;
+      }
+
+      .sub-btn:hover,
+      .sub-btn:focus {
+         background: rgb(0, 153, 255);
+      }
+
+      footer {
+         /* margin-top: 30px; */
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         text-align: center;
+         height: 50px;
+      }
+
+      @media only screen and (max-width: 1000px) {
+         .bg-img::before {
+            background-size: 500%;
+         }
+
+         .my-form {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: rgb(50, 50, 50);
+
+         }
+
+         form {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+         }
+
+         footer {
+            /* margin-top: 30px; */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            height: 50px;
+         }
+
+         .footer h1 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-top: 20px;
+         }
+
+         .footer p a {
+            color: white;
+            font-family: sans-serif;
+            font-size: 9px;
+            margin-top: 20px;
+         }
+      }
+
+      @media only screen and (max-width: 500px) {
+         .bg-img::before {
+            background-size: 500%;
+         }
+
+         .my-form {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: rgb(50, 50, 50);
+
+         }
+
+         form {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+         }
+
+         footer {
+            /* margin-top: 30px; */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            height: 50px;
+         }
+
+         .footer h1 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: 20px;
+         }
+
+         .footer p a {
+            color: white;
+            font-family: sans-serif;
+            font-size: 9px;
+            margin-top: 20px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <nav class="navbar h-nav-resp">
+      <div class="burger">
+         <div class="bug-1"></div>
+         <div class="bug-2"></div>
+         <div class="bug-3"></div>
+      </div>
+      <ul class="nav-list v-class-resp">
+         <div class="logo">
+            <img src="/static/img/unnamed.png" alt="logo">
+         </div>
+         <li><a href="#home">Home</a></li>
+         <li id="gameSection" onclick="mygamedropdown();"><a href="#courses">Games</a>
+            <div class="games" id="games">
+               <ul>
+                  <li> <a href="/"> Action/Adventure </a> </li>
+                  <li> <a href="/"> Horror</a> </li>
+                  <li> <a href="/"> Sci-fi</a> </li>
+                  <li> <a href="/"> Open world</a> </li>
+                  <li> <a href="/"> Survival</a> </li>
+               </ul>
+            </div>
+         </li>
+         <li><a href="#about">PreOrder</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="right-nav v-class-resp">
+         <input type="text" name="Search" id="Search" placeholder="Search here...">
+         <button class="btn btn-sm">Search</button>
+      </div>
+   </nav>
+
+   <div class="bg-img">
+
+   </div>
+   <div class="my-form">
+      <h1>Contact Us</h1>
+      <form action="/contact" method="POST">
+         <input type="text" name="username" placeholder="username">
+         <input type="email" name="email" placeholder="Email">
+         <input type="number" name="phno" placeholder="Ph.number">
+         <textarea name="message" name="desc" id="input" cols="30" rows="10"
+            placeholder="write Your message here.."></textarea>
+         <button class="sub-btn" type="submit">Submit</button>
+
+      </form>
+   </div>
+
+
+
+   <footer class="footer">
+      <h1>@All right reserved cyberx.com 2020-2021</h1>
+      <p><a href=""> youtube</a> <a href="">| Facebook</a> <a href="">| Instagram</a> </p>
+   </footer>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="/static/js/main.js"></script>
+</body>
+
+</html>
