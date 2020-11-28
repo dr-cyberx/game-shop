@@ -4,18 +4,19 @@ const bodyparser = require('body-parser');
 const https = require('https');
 
 const port = 3000;
-// const hostname = '127.0.0.1';
+const hostname = '127.0.0.1';
 
 const app = express();
+app.set('view engine' , 'ejs');
 app.use('/static', express.static('static'));
 app.use(bodyparser.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
-   res.sendFile(__dirname + '/index.html');
+   res.render('index');
 });
 
 app.get('/contact', function (req, res) {
-   res.sendFile(__dirname + '/form.html')
+   res.render('form');
 });
 
 app.post('/contact', function (req, res) {
@@ -59,9 +60,9 @@ app.post('/contact', function (req, res) {
    // res.sendFile(__dirname + '/success.html')
    request.end();
    if (res.statusCode == 200) {
-      res.sendFile(__dirname + '/success.html')
+      res.render('success');
    } else if (res.statusCode == 400) {
-      res.sendFile(__dirname + '/fail.html')
+      res.render('fail');
    }
 });
 
@@ -70,5 +71,5 @@ app.post('/contact', function (req, res) {
 
 
 app.listen(process.env.PORT || port, function () {
-   // console.log(`The server is running at http://${hostname}:${port}`);
+   console.log(`The server is running at http://${hostname}:${port}`);
 });
