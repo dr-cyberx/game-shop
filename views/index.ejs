@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber-X</title>
-  <link rel="stylesheet" href="/static/style/style.css">
-</head>
-
-<body>
-  <nav class="navbar h-nav-resp">
-    <div class="burger">
-      <div class="bug-1"></div>
-      <div class="bug-2"></div>
-      <div class="bug-3"></div>
-    </div>
-    <ul class="nav-list v-class-resp">
-      <div class="logo">
-        <img src="/static/img/unnamed.png" alt="logo">
-      </div>
-      <li><a href="#home">Home</a></li>
-      <li id="gameSection" onclick="mygamedropdown();"><a href="#courses">Games</a>
-        <div class="games" id="games">
-          <ul>
-            <li> <a href="/"> Action/Adventure </a> </li>
-            <li> <a href="/"> Horror</a> </li>
-            <li> <a href="/"> Sci-fi</a> </li>
-            <li> <a href="/"> Open world</a> </li>
-            <li> <a href="/"> Survival</a> </li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#about">PreOrder</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-
-    <div class="right-nav v-class-resp">
-      <input type="text" name="Search" id="Search" placeholder="Search here...">
-      <button class="btn btn-sm">Search</button>
-    </div>
-  </nav>
-
+<%- include('header'); %>
   <section class="background firstsection">
     <div class="box-main">
       <div class="firstHalf">
@@ -150,15 +108,4 @@
 
   </section>
 
-
-  <footer class="footer">
-    <h1>@All right reserved cyberx.com 2020-2021</h1>
-    <p><a href=""> youtube</a> <a href="">| Facebook</a> <a href="">| Instagram</a> </p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/static/js/main.js"></script>
-</body>
-
-</html>
+  <%- include('footer'); %>
